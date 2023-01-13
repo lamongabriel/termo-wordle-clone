@@ -256,10 +256,3 @@ main, .container{
     padding: 0.5rem;
   }
 }
-
-@media (max-width: 470px) {
-  .keyboard-key{
-    font-size: 2rem;
-    padding: 0.5rem;
-  }
-}
