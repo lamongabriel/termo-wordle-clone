@@ -74,9 +74,9 @@ function keyUpEvent(input) {
 
   // ------------ GAME SUBMIT EVENT ------------
   if (key.key === "Enter" || key.code === "Enter") {
-    let userSubmittedAnswer = [...qsa(".line.active .line-block")].map(el => el.innerHTML);
+    let userSubmittedAnswer = [...qsa(".line.active .line-block")].map(el => el.innerHTML.toLowerCase());
     // if submit has 5 characters
-    if (userSubmittedAnswer.join("").length == 5 && possibleWords.find(el => el === userSubmittedAnswer.join(""))) {
+    if (userSubmittedAnswer.length === 5 && possibleWords.find(el => el === userSubmittedAnswer.join(""))) {
       termoClone(userSubmittedAnswer, currentWord)
     } 
     // if not error animation 
